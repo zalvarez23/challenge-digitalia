@@ -8,11 +8,13 @@ type QuestionsComponentProps = {
   questions: IQuestionSurvey[];
   isLoading: boolean;
   saveQuestionSurvey: (questionsSurvey: IQuestionSurvey[]) => void;
+  status: number;
 };
 const QuestionsComponent: React.FC<QuestionsComponentProps> = ({
   questions,
   isLoading,
   saveQuestionSurvey,
+  status,
 }) => {
   const [questionsSurvey, setQuestionSurvey] = useState<IQuestionSurvey[]>([]);
 
@@ -49,12 +51,15 @@ const QuestionsComponent: React.FC<QuestionsComponentProps> = ({
           <QuestionControlLabel
             questionsSurvey={questionsSurvey}
             handleRadioChange={handleRadioChange}
+            status={status}
           />
-          <QuestionsButtons
-            isLoading={isLoading}
-            handlerSaveQuestions={handlerSaveQuestions}
-            handleClearQuestions={handleClearQuestions}
-          />
+          {status === 1 && (
+            <QuestionsButtons
+              isLoading={isLoading}
+              handlerSaveQuestions={handlerSaveQuestions}
+              handleClearQuestions={handleClearQuestions}
+            />
+          )}
         </>
       )}
     </Box>

@@ -77,7 +77,7 @@ const SurveyTable: React.FC<SurveyTableProps> = ({ data }) => {
                   to={{
                     pathname: `/questions/${survey.id || 0}/${
                       survey.surveyTitle
-                    }`,
+                    }/${survey.surveyStatus}`,
                   }}
                 >
                   <IconButton>

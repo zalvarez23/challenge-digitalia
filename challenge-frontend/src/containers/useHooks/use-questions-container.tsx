@@ -7,7 +7,7 @@ import { SurveyServices } from "../../services/survey/survey-services";
 import { ISurvey } from "../../types/survey/survey";
 
 const useQuestionSurveyContainer = () => {
-  const { id, title } = useParams();
+  const { id, title, status } = useParams();
   const [mounted, setMounted] = useState(true);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [questionsSurvey, setQuestionsSurvey] = useState<IQuestionSurvey[]>();
@@ -48,6 +48,7 @@ const useQuestionSurveyContainer = () => {
     isLoading,
     questionsSurvey,
     title,
+    status,
   };
 };
 export default useQuestionSurveyContainer;

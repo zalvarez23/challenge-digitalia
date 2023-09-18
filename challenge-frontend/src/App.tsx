@@ -9,7 +9,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<SurveyContainer />} />
         <Route
-          path="/questions/:id/:title"
+          path="/questions/:id/:title/:status"
           element={<QuestionsSurveyContainer />}
         />
       </Routes>

@@ -5,7 +5,7 @@ import useCreatePermissionContainer from "./useHooks/use-questions-container";
 import QuestionsComponent from "../components/organismos/questions-component";
 
 const QuestionsSurveyContainer: React.FC = () => {
-  const { title, questionsSurvey, saveQuestionSurvey, isLoading } =
+  const { title, questionsSurvey, saveQuestionSurvey, isLoading, status } =
     useCreatePermissionContainer();
 
   return (
@@ -19,6 +19,7 @@ const QuestionsSurveyContainer: React.FC = () => {
         questions={questionsSurvey || []}
         saveQuestionSurvey={saveQuestionSurvey}
         isLoading={isLoading}
+        status={Number(status)}
       />
     </Box>
   );
