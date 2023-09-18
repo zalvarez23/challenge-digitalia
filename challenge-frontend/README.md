@@ -4,14 +4,14 @@ Prueba tecnica de encuesta
 
 ## Requisitos
 
-- Node.js (versión 18.X.X)
-- npm (viene con Node.js)
+-  Node.js v14.17.3 o superior
+-  npm (viene con Node.js)
 
 ## Tecnologias
 
-- Node.js versión 18
-- npm
-- Vue
+-  Node.js versión 18
+-  npm
+-  Vue
 
 ## Instalación
 
